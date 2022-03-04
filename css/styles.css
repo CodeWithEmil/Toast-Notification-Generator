@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+
+    background: #a2caff;
+    color: #2d3557;
+
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    height: 100%;
+    width: 80%;
+
+    display: grid;
+    place-items: center;
+}
+
+button {
+    height: 15rem;
+    width: 20rem;
+
+    cursor: pointer;
+    background: #fff;
+    border: none;
+    border-radius: 20px;
+
+    box-shadow: 0 35px 68px 0 rgba(136, 174, 222, 0.42),
+        inset 0 -8px 16px 0 #b9d1f1;
+    font-size: 1.5rem;
+
+    transition: 0.4s;
+}
+
+button:hover {
+    height: 16rem;
+    width: 21rem;
+    font-size: 1.6rem;
+    padding-bottom: 1rem;
+
+    transform: rotate(1deg);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+#toast-container {
+    height: 98%;
+    width: 20%;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    right: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#toast-container::-webkit-scrollbar {
+    display: none;
+}
+
+.toast {
+    background: #fff;
+    width: fit-content;
+    min-width: 90%;
+
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+
+    box-shadow: 0 35px 68px 0 rgba(136, 174, 222, 0.42),
+        inset 0 -8px 16px 0 #b9d1f1;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    transform: translateX(0%);
+    transition: transform ease-in 3s;
+}
+
+.after {
+    transform: translateX(100%);
+    transition: 0.7s;
+}
+
+.toast i {
+    font-size: 2rem;
+}
+
+.toast .success {
+    color: #6ee93d;
+    margin-right: 3rem;
+}
+.toast .failure {
+    color: #ff817a;
+    margin-right: 1.5rem;
+}
+.toast .warning {
+    color: #ffe100;
+    margin-right: 1.5rem;
+}
+
+.toast h3 {
+    width: 100%;
+    margin-right: 2.5rem;
+}
